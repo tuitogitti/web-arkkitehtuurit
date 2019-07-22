@@ -1,6 +1,6 @@
 # Web-sovellusten arkkitehtuuriratkaisut
 
-## [1 Arkkitehtuuriratkaisut ja niiden tasot](#1-arkkitehtuuriratkaisut-ja-niiden-tasot&#8203;)
+## [1 Arkkitehtuuriratkaisut ja niiden tasot](#1)
 
 ## [2 Infrastruktuuritason arkkitehtuurimallit (Infrastructure architectural patterns)](#2-infrastruktuuritason-arkkitehtuurimallit-(infrastructure-architectural-patterns)&#8203;)
 
@@ -54,7 +54,9 @@
 
 ## [5 Tehtävät](#5-tehtävät&#8203;)
 
-## [1 Arkkitehtuuriratkaisut ja niiden tasot&#8203;](#web-sovellusten-arkkitehtuuriratkaisut)
+<a id='1'></a>
+
+## [1 Arkkitehtuuriratkaisut ja niiden tasot](#web-sovellusten-arkkitehtuuriratkaisut)
 
 Aivan kuten rakennusarkkitehti suunnittelee mistä rakenneosista tehdään talo ja kuinka osat toimivat keskenään, sovellusarkkitehti suunnittelee web-sovelluksen rakenneosat ja niiden välisen vuorovaikutuksen. Web-sovelluksessa voidaan käyttää yhtä tai useampaa arkkitehtuuriratkaisua. Ylemmän tason arkkitehtuurin sisällä olevissa rakenneosissa voidaan käyttää toista arkkitehtuurimallia ja frontendeillä ja backendeillä voi olla omat arkkitehtuurimallinsa.  
 
@@ -109,7 +111,7 @@ Palvelinpuolen ja asiakaspuolen sovellusten erottaminen toisistaan tarjoaa seura
 
 * Voidaan helposti toteuttaa useita erilaisia asiakaspuolen sovelluksia samalle backendille.
 
--[REST-esimerkki](esimerkit/restmvc.zip)  
+-[REST-esimerkki](https://github.com/tuitogitti/web_arkkitehtuurit/tree/master/esimerkit/restmvc)  
 
 ### [2.4 Microservice -arkkitehtuuri&#8203;](#web-sovellusten-arkkitehtuuriratkaisut)
 
@@ -166,7 +168,7 @@ Eri kerrokset on erotettu toisistaan kooditasolla ja käyttöliittymäkehittäj�
 
 Palvelinpuolen MVC-sovelluksen view on ollut perinteisesti ns. backendin view, eli tarkoittaa sitä että view luodaan templaattiin, eli yleensä HTML-sivupohjaan, palvelinpuolelle. Tällöin view on sidottu palvelinpuolen koodiin, eikä voida sanoa että sovelluksella olisi erillinen frontend. Usein  MVC-arkkitehtuuria noudattavassa web-sovelluksessa on myös REST-api joka mahdollistaa tiedon vaihtamisen samaan sovellukseen kuuluvan erillisen frontendin tai muiden sovellusten kanssa. MVC + REST on web-sovellusten yleisimpiä arkkitehtuuriyhdistelmiä.
 
--[MCV-esimerkki](esimerkit/restmvc.zip)  
+-[MCV-esimerkki](https://github.com/tuitogitti/web_arkkitehtuurit/tree/master/esimerkit/restmvc)  
 
 ### [3.2 MVVM-arkkitehtuuri&#8203;](#web-sovellusten-arkkitehtuuriratkaisut)
 
@@ -184,7 +186,7 @@ Palvelinpuolen MVC-sovelluksen view on ollut perinteisesti ns. backendin view, e
 
 [MVW](http://www.quora.com/What-is-MVW-Model-View-Whatever-How-is-it-different-from-MVC) (Model-View-Whatever) tarkoittaa arkkitehtuuria jossa on selvästi erotettavissa model ja view, mutta kontrolleri ei välttämättä toimi perinteisen kontrollerin tavoin. Arkkitehtuuri voi esimerkiksi olla tilanteen mukaan MVC, MVP tai MVVM. Angularin arkkitehtuuri on tästä tyypillinen esimerkki. Myös laajemmissa React-sovelluksissa paljon käytetty [Flux](https://blog.mgechev.com/2015/05/15/flux-in-depth-overview-components/)-arkkitehtuuri edustaa lähinnä MVW -arkkitehtuuria.
 
--[MVW -esimerkki](esimerkit/ang-contactapp2.zip)
+-[MVW -esimerkki](https://github.com/tuitogitti/web_arkkitehtuurit/tree/master/esimerkit/ang-contactapp2)
 
 ### [3.5 Web-komponenttiarkkitehtuuri&#8203;](#web-sovellusten-arkkitehtuuriratkaisut)
 
@@ -244,7 +246,7 @@ ORM/ODM -kirjastot ovat aina backend-puolen kirjastoja. Tunnettuja ORM -kirjasto
 
 ORM- ja ODM-kirjastot eivät pelkästään hallinnoi olioiden tallentamista kantaan ja sieltä palauttamista, vaan ne yleensä myös abstraktoivat tietokantarajapinnan eli tarjoavat yksinkertaisemmat metodit tietokannan käsittelyyn. ORM/ODM:n tarjoaman rajapinnan abstraktion ansiosta tietokannan vaihtaminen helpottuu huomattavasti. ORM/ODM:n käyttö myös pakottaa kantaan tallennettavan tiedon tietyn mallin mukaiseksi jolloin mitä tahansa tietoa ei voi tallentaa kantaan eli tiedon luotettavuus paranee. Joskus tietokantaa voi käyttää sovelluskehyksessä ainoastaan ORM/ODM -rajapinnan kautta.
 
--[ODM -esimerkki](esimerkit/restmvc.zip)  
+-[ODM -esimerkki](https://github.com/tuitogitti/web_arkkitehtuurit/tree/master/esimerkit/restmvc)  
 
 ## [4 Ohjelmistosuunnittelumallit (Software design patterns)&#8203;](#web-sovellusten-arkkitehtuuriratkaisut)
 
@@ -264,7 +266,7 @@ Erilaisia ohjelmistosuunnittelumalleja on web-sovelluksissa niin paljon että ni
 
 [Dependency Injection](https://en.wikipedia.org/wiki/Dependency_injection) (riippuvuuden injektointi) on kehitetty tekemään sovelluksen yksiköt, esim. komponentit tai oliot vähemmän riippuvaisiksi toisistaan. Siihen liittyy [Inversion of Control](https://en.wikipedia.org/wiki/Inversion_of_control) (kontrollin kääntäminen) -periaate, joka tarkoittaa sitä että yksiköt voidaan vaihtaa helposti toisiin, ilman että koodiin tarvitsee tehdä juuri mitään muutoksia ja vaihtamisen kontrollointi sijaitsee esim. sovelluskehyksen konffitiedostossa (on käännetty sinne). DI luokitellaan [luomiseen liittyväksi malliksi](https://en.wikipedia.org/wiki/Creational_pattern), koska olio (riippuvuus) joka vastaanotetaan toiseen olioon (asiakas) luodaan sinne injektorina.  
 
--[DI ja IoC -esimerkki](esimerkit/ang-di.zip)
+-[DI ja IoC -esimerkki](https://github.com/tuitogitti/web_arkkitehtuurit/tree/master/esimerkit/ang-di)
 
 ### [4.2 Reaktiiviset suunnittelumallit ja Observer-observable pattern&#8203;](#web-sovellusten-arkkitehtuuriratkaisut)
 
@@ -281,19 +283,19 @@ Voi olla että reaktiivinen sovellus ei kykene ottamaan vastaan datavirtaa niin 
 -[The introduction to Reactive Programming you've been missing  
 -](https://gist.github.com/staltz/868e7e9bc2a7b8c1f754)[Building a real time search in Angular with RxJS](https://alligator.io/angular/real-time-search-angular-rxjs/) (sivulla toimiva esimerkki)
 
--[Reaktiivinen observer-observable -esimerkki](esimerkit/ang-communicationservice.zip)
+-[Reaktiivinen observer-observable -esimerkki](https://github.com/tuitogitti/web_arkkitehtuurit/tree/master/esimerkit/ang-communicationservice)
 
 ### [4.3 Mediator pattern&#8203;](#web-sovellusten-arkkitehtuuriratkaisut)
 
 [Mediator-pattern](https://en.wikipedia.org/wiki/Mediator_pattern) on ohjelmistosuunnittelumalli joka mahdollistaa kahden toisistaan eristetyn yksikön välisen kommunikaation ilman yksiköiden välistä riippuvuutta. Ns. mediaattori toimii kommunikaation välittäjänä. Esim. Angularissa äitikomponentti voi toimia kahden lapsikomponenttinsa mediaattorina. Mediator-pattern on [käyttäytymiseen liittyvä malli](https://en.wikipedia.org/wiki/Behavioral_pattern), sillä se määrittelee rakenneosien välisen kommunikaation.  
 
--[Mediator-pattern esimerkki](esimerkit/ang-mediator.zip)
+-[Mediator-pattern esimerkki](https://github.com/tuitogitti/web_arkkitehtuurit/tree/master/esimerkit/ang-mediator)
 
 ### [4.4 Lazy-loading -pattern&#8203;](#web-sovellusten-arkkitehtuuriratkaisut)
 
 [Lazy-loading -pattern](https://en.wikipedia.org/wiki/Lazy_loading) on ohjelmistosuunnittelumalli joka mahdollistaa sovelluksen rakenneosan/olion lataamisen/luomisen muistiin vasta sitten kun sitä tarvitaan sovelluksessa. Tästä on hyötyä erityisesti web-sovelluksissa joissa halutaan nopeuttaa sovelluksen latautumista palvelimelta asiakaspuolelle jotta sovelluksen käynnistymisaika jäisi mahdollisimman lyhyeksi. Myös harvoin tarvittava rakenneosa voidaan ottaa käyttöön lazy-loading -periaatteella. Lazy-loading malli ei kuulu suoraan mihinkään edellä esitettyyn kategoriaan, mutta koska se liittyy olion luomiseen muistiin, se voisi olla lähinnä kreationaalinen eli [luomiseen liittyvä](https://en.wikipedia.org/wiki/Creational_pattern) malli.  
 
--[Lazy-loading -pattern esimerkki](esimerkit/ang-mediator.zip)
+-[Lazy-loading -pattern esimerkki](https://github.com/tuitogitti/web_arkkitehtuurit/tree/master/esimerkit/ang-router)
 
 ### [4.5 Decorator -pattern&#8203;](#web-sovellusten-arkkitehtuuriratkaisut)
 
