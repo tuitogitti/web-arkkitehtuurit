@@ -1,0 +1,7 @@
+Esimerkki valottaa Dependency Injectionin ja Inversion of Controlin (Ioc)
+toimintaperiaatetta. Nämä ovat Sotfware design patterneja eli ohjelmistosuunnittelumalleja.
+Patternit ovat pieniä arkkitehtuuriratkaisuja tai yleisiä käytänteitä.
+
+Huomaa että esimerkissä komponentit ovat kokonaan yhdessä tiedostossa eli
+erillistä templaattia ja css-filua ei ole. Samoin kaksi serviceä on laitettu
+yhteen tiedostoon. Tämä siksi että esimerkki on saatu pidettyä pienempänä.

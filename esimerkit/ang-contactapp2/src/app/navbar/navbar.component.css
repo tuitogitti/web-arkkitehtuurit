@@ -1,0 +1,14 @@
+nav {
+    font-family: verdana, arial;
+    color: #efefef;
+    background-color: black;
+  }
+  a {
+    text-decoration:none;
+  }
+  a:visited {
+    color: #efefef;
+  }
+  a:hover {
+    color: #C0C0C0;
+  }

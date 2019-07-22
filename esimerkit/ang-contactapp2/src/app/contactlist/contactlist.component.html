@@ -1,0 +1,10 @@
+<!-- *ngFor on iteraatiodirektiivi joka toistaa sitä elementtiä
+jonka sisällä se on -->
+<div *ngFor="let c of contacts">
+  <!--div class="contact">
+    <p>{{ c.name }} - {{ c.email }}</p>
+  </div-->
+<!-- Tehdään yksittäisestä kontaktista oma komponenttinsa app-contact.
+Välitetaan muuttuja c app-contactille property bindingin avulla-->
+<app-contact [c]="c"></app-contact>
+</div>

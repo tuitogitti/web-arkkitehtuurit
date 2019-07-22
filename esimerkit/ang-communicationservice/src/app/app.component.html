@@ -1,0 +1,12 @@
+<!-- main app container -->
+<div class="app">
+  <div>
+      <div>
+          <h1>App</h1>
+          <div *ngIf="message">{{message.text}}</div>
+          <!-- viesti pitää välittää servicen kautta koska sitä ei voi
+          välittää data-bindingilla johtuen reitityksestä -->
+          <router-outlet></router-outlet>
+      </div>
+  </div>
+</div>

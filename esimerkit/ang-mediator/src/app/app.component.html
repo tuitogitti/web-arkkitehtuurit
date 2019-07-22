@@ -1,0 +1,9 @@
+<h2>Mediator pattern</h2>
+<p>Eri väriset alueet ovat kaksi eri komponenttia.<br /> Ylemmästä komponentista
+    lähtevä data välitetään alemmalle komponentille näiden äitikomponentin eli mediaattorin
+    kautta.<br /> Lapsikomponenttien ei tarvitse tietää mitään toistensa olemassaolosta
+    vaan ne ovat yhteydessä toisiinsa vain mediaattorin kautta.</p>
+<!-- price-komponentin buy -eventemitter otetaan vastaan mediaattorissa ja siitä saatu
+     Stock-olio välitetään order-komponentin stock -setteriin jossa on @input -merkintä -->
+    <p><app-price (buy)="priceHandler($event)"></app-price></p>
+    <p><app-order [stock]="stock"></app-order></p>
