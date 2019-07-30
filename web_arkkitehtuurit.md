@@ -2,57 +2,57 @@
 
 ## [1 Arkkitehtuuriratkaisut ja niiden tasot](#1)
 
-## [2 Infrastruktuuritason arkkitehtuurimallit (Infrastructure architectural patterns)](#2-infrastruktuuritason-arkkitehtuurimallit-(infrastructure-architectural-patterns)&#8203;)
+## [2 Infrastruktuuritason arkkitehtuurimallit (Infrastructure architectural patterns)](#2)
 
-> ### [2.1 Asiakas-palvelin -arkkitehtuuri ja sen variaatiot](#2.1-asiakas-palvelin--arkkitehtuuri-ja-sen-variaatiot&#8203;)
+> ### [2.1 Asiakas-palvelin -arkkitehtuuri ja sen variaatiot](#21)
 >
-> ### [2.2 Palvelukeskeinen arkkitehtuuri eli Service Oriented Architecture (SOA)](#2.2-palvelukeskeinen-arkkitehtuuri-eli-service-oriented-architecture-(soa)&#8203;)
+> ### [2.2 Palvelukeskeinen arkkitehtuuri eli Service Oriented Architecture (SOA)](#22)
 >
-> ### [2.3 REST -arkkitehtuuri](#2.3-rest--arkkitehtuuri&#8203;)
+> ### [2.3 REST -arkkitehtuuri](#23)
 >
-> ### [2.4 Microservice -arkkitehtuuri](#2.4-microservice--arkkitehtuuri&#8203;)
+> ### [2.4 Microservice -arkkitehtuuri](#24)
 >
-> ### [2.5 Serverless -arkkitehtuuri](#2.5-serverless--arkkitehtuuri&#8203;)
+> ### [2.5 Serverless -arkkitehtuuri](#25)
 
-## [3 Ohjelmistotason arkkitehtuurimallit (Software architectural patterns)](#3-ohjelmistotason-arkkitehtuurimallit-(software-architectural-patterns)&#8203;)
+## [3 Ohjelmistotason arkkitehtuurimallit (Software architectural patterns)](#3)
 
-> ### [3.1 MVC-arkkitehtuuri](#3.1-mvc-arkkitehtuuri&#8203;)
+> ### [3.1 MVC-arkkitehtuuri](#31)
 >
-> ### [3.2 MVVM-arkkitehtuuri](#3.2-mvvm-arkkitehtuuri&#8203;)
+> ### [3.2 MVVM-arkkitehtuuri](#32)
 >
-> ### [3.3 MVP-arkkitehtuuri](#3.3-mvp-arkkitehtuuri&#8203;)
+> ### [3.3 MVP-arkkitehtuuri](#33)
 >
-> ### [3.4 MVW-arkkitehtuuri](#3.4-mvw-arkkitehtuuri&#8203;)
+> ### [3.4 MVW-arkkitehtuuri](#34)
 >
-> ### [3.5 Web-komponettiarkkitehtuuri](#3.5-web-komponenttiarkkitehtuuri&#8203;)
+> ### [3.5 Web-komponettiarkkitehtuuri](#35)
 >
-> ### [3.6 Modulaarinen arkkitehtuuri](#3.6-modulaarinen-arkkitehtuuri&#8203;)
+> ### [3.6 Modulaarinen arkkitehtuuri](#36)
 >
-> ### [3.7 Ohjelmistotason arkkitehtuurimallien rakenneosia](#3.7-ohjelmistotason-arkkitehtuurimallien-rakenneosia&#8203;)
+> ### [3.7 Ohjelmistotason arkkitehtuurimallien rakenneosia](#37)
 >
-> > ### [3.7.1 Sovelluskehykset](#3.7.1-sovelluskehykset&#8203;)
+> > ### [3.7.1 Sovelluskehykset](#371)
 > >
-> > ### [3.7.2 Moduulit ja ohjelmakirjastot](#3.7.2-moduulit-ja-ohjelmakirjastot&#8203;)
+> > ### [3.7.2 Moduulit ja ohjelmakirjastot](#372)
 > >
-> > ### [3.7.3 Komponentit](#3.7.3-komponentit&#8203;)
+> > ### [3.7.3 Komponentit](#373)
 > >
-> > ### [3.7.4 Templaattijärjestelmät](#3.7.4-templaattijärjestelmät&#8203;)
+> > ### [3.7.4 Templaattijärjestelmät](#374)
 > >
-> > ### [3.7.5 ORM ja ODM](#3.7.5-orm-ja-odm&#8203;)
+> > ### [3.7.5 ORM ja ODM](#375)
 
-## [4 Ohjelmistosuunnittelumallit (Software design patterns)](#4-ohjelmistosuunnittelumallit-(software-design-patterns)&#8203;)
+## [4 Ohjelmistosuunnittelumallit (Software design patterns)](#4)
 
-> ### [4.1 Dependency Injection ja Inversion of Control](#4.1-dependency-injection-ja-inversion-of-control&#8203;)
+> ### [4.1 Dependency Injection ja Inversion of Control](#41)
 >
-> ### [4.2 Reaktiiviset suunnittelumallit ja Observer-observable pattern](#4.2-reaktiiviset-suunnittelumallit-ja-observer-observable-pattern&#8203;)
+> ### [4.2 Reaktiiviset suunnittelumallit ja Observer-observable pattern](#42)
 >
-> ### [4.3 Mediator pattern](#4.3-mediator-pattern&#8203;)
+> ### [4.3 Mediator pattern](#43)
 >
-> ### [4.4 Lazy-loading pattern](#4.4-lazy-loading-pattern&#8203;)
+> ### [4.4 Lazy-loading pattern](#44)
 >
-> ### [4.5 Decorator pattern](#4.5-decorator-pattern&#8203;)
+> ### [4.5 Decorator pattern](#45)
 
-## [5 Tehtävät](#5-tehtävät&#8203;)
+## [5 Tehtävät](#5)
 
 <a id='1'></a>
 
@@ -70,11 +70,15 @@ Web-sovellusten arkkitehtuuriratkaisut voidaan jakaa kolmeen tasoon. Ylemmän ta
 
 3. [Ohjelmistosuunnittelumalli](https://en.wikipedia.org/wiki/Software_design_pattern)t. Pienempiä arkkitehtuuriratkaisuja eli malleja (pattern) jotka eivät vaikuta koko sovelluksen rakenteeseen vaan antavat esim. mallin sille miten tietty toiminto tulee toteuttaa.
 
-Useimmat tässä esitellyt arkkitehtuuriratkaisut eivät rajoitu pelkästään web-sovelluksiin, vaan niitä käytetään kaikenlaisilla alustoilla toimivissa ohjelmistoissa. Esim. työpöytäsovellukseen alunperin kehitelty arkkitehtuuriratkaisu on voitu ottaa käyttöön web-sovellukseen kun työpöytäsovellus on nykytrendien mukaisesti muutettu web-sovellukseksi.  
+Useimmat tässä esitellyt arkkitehtuuriratkaisut eivät rajoitu pelkästään web-sovelluksiin, vaan niitä käytetään kaikenlaisilla alustoilla toimivissa ohjelmistoissa. Esim. työpöytäsovellukseen alunperin kehitelty arkkitehtuuriratkaisu on voitu ottaa käyttöön web-sovellukseen kun työpöytäsovellus on nykytrendien mukaisesti muutettu web-sovellukseksi.
 
-## [2 Infrastruktuuritason arkkitehtuurimallit (Infrastructure architectural patterns)&#8203;](#web-sovellusten-arkkitehtuuriratkaisut)
+<a id='2'></a>
 
-### [2.1 Asiakas-palvelin -arkkitehtuuri ja sen variaatiot&#8203;](#web-sovellusten-arkkitehtuuriratkaisut)
+## [2 Infrastruktuuritason arkkitehtuurimallit (Infrastructure architectural patterns)](#web-sovellusten-arkkitehtuuriratkaisut)
+
+<a id='21'></a>
+
+### [2.1 Asiakas-palvelin -arkkitehtuuri ja sen variaatiot](#web-sovellusten-arkkitehtuuriratkaisut)
 
 Asiakas-palvelin -malli on vanhimpia infrastruktuuritason arkkitehtuurimalleja. Web-sovellus voi noudattaa perinteistä asiakas-palvelin -arkkitehtuuria jolloin sovelluskoodi suoritetaan kokonaan palvelimella ja vain sen tuottama HTML lähetetään selaimelle. Uudempi versio tästä on ns. "thick client - thin server" -malli, jossa palvelimelta lähetetään selaimelle isompi asiakassovellus jossa tapahtuu koodin suoritus. Palvelimen tehtävänä on lähinnä välittää dataa tietokannasta asiakassovellukselle.
 
@@ -82,13 +86,17 @@ Asiakas-palvelin -malli on vanhimpia infrastruktuuritason arkkitehtuurimalleja. 
 
 -[Kolme asiakas-palvelin -arkkitehtuurin variaatioita](https://mobidev.biz/blog/3_types_of_web_application_architecture)
 
-### [2.2 Palvelukeskeinen arkkitehtuuri eli Service Oriented Architecture (SOA)&#8203;](#web-sovellusten-arkkitehtuuriratkaisut)
+<a id='22'></a>
+
+### [2.2 Palvelukeskeinen arkkitehtuuri eli Service Oriented Architecture (SOA)](#web-sovellusten-arkkitehtuuriratkaisut)
 
 [SOA-arkkitehtuuri](https://en.wikipedia.org/wiki/Service-oriented_architecture) on yleisnimitys arkkitehtuuriratkaisuille jotka perustuvat ulkoisista lähteistä saatavien palveluiden käyttöön sovelluksessa. Infrastruktuuri jakaa sovelluksen hajautettuihin osiin joita kutsutaan palveluiksi. Palveluita käytetään yleensä webin välityksellä API-rajapintojen kautta. API-rajapinnat abstraktoivat alla olevan sovelluslogiikan jolloin ihannetapauksessa mikä tahansa asiakassovellus voi käyttää mitä tahansa palvelua. Vanhassa SOA-arkkitehtuurissa ns. palveluväylä sijaitsi organisaation omassa verkossa. Nykyään palvelut tulevat yleensä webistä/pilvestä. SOA-arkkitehtuurin toteutuskeinoja/alamuotoja ovat esim. [SOAP](https://en.wikipedia.org/wiki/SOAP) web services, [REST](http://en.wikipedia.org/wiki/Representational_state_transfer) ja [GraphQL](https://en.wikipedia.org/wiki/GraphQL).  
 
 ![rest_soa](rest_soa.png)
 
-### [2.3 REST-arkkitehtuuri&#8203;](#web-sovellusten-arkkitehtuuriratkaisut)
+<a id='23'></a>
+
+### [2.3 REST-arkkitehtuuri](#web-sovellusten-arkkitehtuuriratkaisut)
 
 [REST](http://en.wikipedia.org/wiki/Representational_state_transfer) -arkkitehtuuri voidaan määritellä yhdeksi SOA-arkkitehtuurin muodoksi. REST eli Representational State Transfer -termillä tarkoitetaan tiedonsiirtoa HTTP:n välityksellä XML-, JSON- tai tekstimuodossa. REST -rajapintoja käytetään nykyään todella paljon, paitsi sovellusten väliseen, myös sovelluksen sisäiseen tiedonsiirtoon. Sovelluksen backend eli palvelinpuoli voidaan toteuttaa esim. Nodejs:llä ja frontend eli asiakaspuoli Angularilla. Nämä ovat kokonaan erillään toisistaan ja tieto niiden välillä kulkee REST-rajapinnan kautta JSON-muodossa. Sekä backend että frontend voivat noudattaa ohjelmistotasolla esim. MVC-arkkitehtuuria.
 
@@ -111,9 +119,11 @@ Palvelinpuolen ja asiakaspuolen sovellusten erottaminen toisistaan tarjoaa seura
 
 * Voidaan helposti toteuttaa useita erilaisia asiakaspuolen sovelluksia samalle backendille.
 
--[REST-esimerkki](https://github.com/tuitogitti/web_arkkitehtuurit/tree/master/esimerkit/restmvc)  
+-[REST-esimerkki](https://github.com/tuitogitti/web_arkkitehtuurit/tree/master/esimerkit/restmvc)
 
-### [2.4 Microservice -arkkitehtuuri&#8203;](#web-sovellusten-arkkitehtuuriratkaisut)
+<a id='24'></a>
+
+### [2.4 Microservice -arkkitehtuuri](#web-sovellusten-arkkitehtuuriratkaisut)
 
 [Microservice](https://en.wikipedia.org/wiki/Microservices) -arkkitehtuuri on modulaarinen palvelintason arkkitehtuuri joka voi toimia myös SOA-arkkitehtuurin periaatteella. Backend koostuu toisistaan riippumattomista mikropalveluista jotka voivat siirtää dataa sovelluksen "päämoduulille" tai suoraan asiakassovellukselle web-selaimeen tai mobiililaitteelle. Jokaisella mikropalvelulla on oma tietovarasto, yleensä tietokanta. Microservice -sovelluksen vastakohta on monoliittinen sovellus, jossa kaikki palvelut ovat kiinni samassa backend-sovelluksessa ilman mahdollisuutta erottaa niitä toisistaan.  
 
@@ -123,7 +133,9 @@ Microservice-arkkitehtuurin suurimpana etuna on mahdollisuus päivittää sovell
 
 -[Build a NodeJS cinema microservice and deploying it with Docker](https://medium.com/@cramirez92/build-a-nodejs-cinema-microservice-and-deploying-it-with-docker-part-1-7e28e25bfa8b)
 
-### [2.5 Serverless-arkkitehtuuri&#8203;](#web-sovellusten-arkkitehtuuriratkaisut)
+<a id='25'></a>
+
+### [2.5 Serverless-arkkitehtuuri](#web-sovellusten-arkkitehtuuriratkaisut)
 
 [Serverless](https://en.wikipedia.org/wiki/Serverless_computing) -arkkitehtuurissa backend toteutetaan joko kokonaan tai osittain pilvipalvelualustan tarjoamina palveluina. Monet kehittäjät käyttävät nykyään valmiita pilvipalveluiden tarjoamia backend-moduuleja ja keskittyvät kehitystyössä lähinnä frontendiin. Serverless -ratkaisussa serveri on tietysti olemassa, mutta kehittäjän ei tarvitse kiinnittää siihen lainkaan huomiota. Serverless-ratkaisu voi olla [Backend as a Service](https://en.wikipedia.org/wiki/Mobile_backend_as_a_service) (BaaS) tai [Function as a Service](https://en.wikipedia.org/wiki/Function_as_a_service) (Faas) tai niiden yhdistelmä.  
 
@@ -151,9 +163,13 @@ Funktio ja sen container poistetaan serveriltä suorituksen jälkeen. Vain funkt
 
 -[Serverless deployment](http://microservices.io/patterns/deployment/serverless-deployment.html)
 
-## [3 Ohjelmistotason arkkitehtuurimallit (Software architectural patterns)&#8203;](#web-sovellusten-arkkitehtuuriratkaisut)
+<a id='3'></a>
 
-### [3.1 MVC-arkkitehtuuri&#8203;](#web-sovellusten-arkkitehtuuriratkaisut)
+## [3 Ohjelmistotason arkkitehtuurimallit (Software architectural patterns)](#web-sovellusten-arkkitehtuuriratkaisut)
+
+<a id='31'></a>
+
+### [3.1 MVC-arkkitehtuuri](#web-sovellusten-arkkitehtuuriratkaisut)
 
 [MVC](http://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller) eli Model-View-Controller on web-sovellusten yleisin ohjelmistotason arkkitehtuurimalli. Sitä käytetään sekä backend- että frontend-sovelluksissa, esim. Expressissä (Nodejs), osittain Angularissa. Useimmissa PHP-, .NET ja JavaEE -sovelluskehyksissä on käytössä MVC -malli.  
 
@@ -168,37 +184,51 @@ Eri kerrokset on erotettu toisistaan kooditasolla ja käyttöliittymäkehittäj�
 
 Palvelinpuolen MVC-sovelluksen view on ollut perinteisesti ns. backendin view, eli tarkoittaa sitä että view luodaan templaattiin, eli yleensä HTML-sivupohjaan, palvelinpuolelle. Tällöin view on sidottu palvelinpuolen koodiin, eikä voida sanoa että sovelluksella olisi erillinen frontend. Usein  MVC-arkkitehtuuria noudattavassa web-sovelluksessa on myös REST-api joka mahdollistaa tiedon vaihtamisen samaan sovellukseen kuuluvan erillisen frontendin tai muiden sovellusten kanssa. MVC + REST on web-sovellusten yleisimpiä arkkitehtuuriyhdistelmiä.
 
--[MCV-esimerkki](https://github.com/tuitogitti/web_arkkitehtuurit/tree/master/esimerkit/restmvc)  
+-[MCV-esimerkki](https://github.com/tuitogitti/web_arkkitehtuurit/tree/master/esimerkit/restmvc)
 
-### [3.2 MVVM-arkkitehtuuri&#8203;](#web-sovellusten-arkkitehtuuriratkaisut)
+<a id='32'></a>
+
+### [3.2 MVVM-arkkitehtuuri](#web-sovellusten-arkkitehtuuriratkaisut)
 
 [MVVM](http://en.wikipedia.org/wiki/Model_View_ViewModel) (Model-View-ViewModel) on MVC arkkitehtuurin muunnos, jossa controllerin tilalla on view-model. Se on kerros jonka tehtävänä on ottaa vastaan dataa modelista. Data välitetään siitä varsinaiseen viewiin. Välissä on usein ns. Binder-kerros joka sitoo toisiinsa viewin ja view-modelin. Binder toteuttaa two-way data bindingin, eli muutos modeliin näkyy heti viewissä ja toisinpäin. MVVM on käytössä useissa JS frontend-sovelluskehyksissä kuten [Vuessa](https://012.vuejs.org/guide/), Emberissä ja Knockoutissa. Myös Angular noudattaa osittain MVVM -mallia.  
 
 ![mvvm](mvvm.png)
 
-### [3.3 MVP-arkkitehtuuri&#8203;](#web-sovellusten-arkkitehtuuriratkaisut)
+<a id='33'></a>
+
+### [3.3 MVP-arkkitehtuuri](#web-sovellusten-arkkitehtuuriratkaisut)
 
 [MVP](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93presenter) (Model-View-Presenter) on MVC-arkkitehtuurin muunnos jossa controllerin tilalla on presenter. MVP toimii muuten kuten MVVM, mutta MVP:ssä ei ole binder-kerrosta. Presenter-kerros hoitaa käyttöliittymälogiikan ja toimittaa esitettävän datan viewille. MVP-mallissa yhtä presenteriä vastaa aina yksi view. MVP on web-sovelluksissa käytössä enimmäkseen käyttöliittymäsovelluskehyksissä, kuten Vaadin ja GWT (JavaEE).  
 
 ![arkkitehtuureja](arkkkitehtuurit.png)
 
-### [3.4 MVW-arkkitehtuuri&#8203;](#web-sovellusten-arkkitehtuuriratkaisut)
+<a id='34'></a>
+
+### [3.4 MVW-arkkitehtuuri](#web-sovellusten-arkkitehtuuriratkaisut)
 
 [MVW](http://www.quora.com/What-is-MVW-Model-View-Whatever-How-is-it-different-from-MVC) (Model-View-Whatever) tarkoittaa arkkitehtuuria jossa on selvästi erotettavissa model ja view, mutta kontrolleri ei välttämättä toimi perinteisen kontrollerin tavoin. Arkkitehtuuri voi esimerkiksi olla tilanteen mukaan MVC, MVP tai MVVM. Angularin arkkitehtuuri on tästä tyypillinen esimerkki. Myös laajemmissa React-sovelluksissa paljon käytetty [Flux](https://blog.mgechev.com/2015/05/15/flux-in-depth-overview-components/)-arkkitehtuuri edustaa lähinnä MVW -arkkitehtuuria.
 
 -[MVW -esimerkki](https://github.com/tuitogitti/web_arkkitehtuurit/tree/master/esimerkit/ang-contactapp2)
 
-### [3.5 Web-komponenttiarkkitehtuuri&#8203;](#web-sovellusten-arkkitehtuuriratkaisut)
+<a id='35'></a>
 
-Web-komponenttiarkkitehtuuri tarkoittaa tässä [Web-components](https://en.wikipedia.org/wiki/Web_Components) -periaatteen mukaista käyttöliittymä- arkkitehtuuria jossa web-sovelluksen käyttöliittymä pilkotaan erillisiin uudelleenkäytettäviin komponentteihin jotka ovat vuorovaikutuksessa toistensa kanssa. Tunnetuimpia toteutuksia ovat [React](https://facebook.github.io/react/), [Angular](https://angular.io/) ja [Vue](https://vuejs.org/). [Komponenttiarkkitehtuurilla](https://en.wikipedia.org/wiki/Component-based_software_engineering) voi olla myös muita merkityksiä.  
+### [3.5 Web-komponenttiarkkitehtuuri](#web-sovellusten-arkkitehtuuriratkaisut)
 
-### [3.6 Modulaarinen arkkitehtuuri&#8203;](#web-sovellusten-arkkitehtuuriratkaisut)
+Web-komponenttiarkkitehtuuri tarkoittaa tässä [Web-components](https://en.wikipedia.org/wiki/Web_Components) -periaatteen mukaista käyttöliittymä- arkkitehtuuria jossa web-sovelluksen käyttöliittymä pilkotaan erillisiin uudelleenkäytettäviin komponentteihin jotka ovat vuorovaikutuksessa toistensa kanssa. Tunnetuimpia toteutuksia ovat [React](https://facebook.github.io/react/), [Angular](https://angular.io/) ja [Vue](https://vuejs.org/). [Komponenttiarkkitehtuurilla](https://en.wikipedia.org/wiki/Component-based_software_engineering) voi olla myös muita merkityksiä.
 
-[Modulaarisen](https://en.wikipedia.org/wiki/Modular_programming) arkkitehtuurin perusperiaatteena on se että sovellus muodostuu itsenäisistä moduuleista joita voidaan poistaa, lisätä tai korvata toisilla moduuleilla. Käsitteet komponentti ja moduuli voidaan sekoittaa toisiinsa, mutta yleensä moduuli on suurempi kokonaisuus kuin komponentti. Angular-sovelluksen komponentit pakataan moduuleihin. Esim. verkkokaupassa voi olla käyttöliittymämoduuli joka sisältää käyttöliittymäkomponentit ja maksumoduuli joka sisältää maksamiseen liittyvät komponentit. Monet nykyaikaiset web-sovellukset ovat ainakin osittain modulaarisia, sillä ne käyttävät Nodejs:n npm-moduuleja. Myös Wordpressin rakenne on modulaarinen, sillä WP-järjestelmään on mahdollisuus asentaa lisäosia joita voidaan kutsua moduuleiksi. Palvelinpuolen Microservices -arkkitehtuuri on myös modulaarinen arkkitehtuuri.  
+<a id='36'></a>
 
-### [3.7 Ohjelmistotason arkkitehtuurimallien rakenneosia&#8203;](#web-sovellusten-arkkitehtuuriratkaisut)
+### [3.6 Modulaarinen arkkitehtuuri](#web-sovellusten-arkkitehtuuriratkaisut)
 
-### [3.7.1 Sovelluskehykset&#8203;](#web-sovellusten-arkkitehtuuriratkaisut)
+[Modulaarisen](https://en.wikipedia.org/wiki/Modular_programming) arkkitehtuurin perusperiaatteena on se että sovellus muodostuu itsenäisistä moduuleista joita voidaan poistaa, lisätä tai korvata toisilla moduuleilla. Käsitteet komponentti ja moduuli voidaan sekoittaa toisiinsa, mutta yleensä moduuli on suurempi kokonaisuus kuin komponentti. Angular-sovelluksen komponentit pakataan moduuleihin. Esim. verkkokaupassa voi olla käyttöliittymämoduuli joka sisältää käyttöliittymäkomponentit ja maksumoduuli joka sisältää maksamiseen liittyvät komponentit. Monet nykyaikaiset web-sovellukset ovat ainakin osittain modulaarisia, sillä ne käyttävät Nodejs:n npm-moduuleja. Myös Wordpressin rakenne on modulaarinen, sillä WP-järjestelmään on mahdollisuus asentaa lisäosia joita voidaan kutsua moduuleiksi. Palvelinpuolen Microservices -arkkitehtuuri on myös modulaarinen arkkitehtuuri.
+
+<a id='37'></a>
+
+### [3.7 Ohjelmistotason arkkitehtuurimallien rakenneosia](#web-sovellusten-arkkitehtuuriratkaisut)
+
+<a id='371'></a>
+
+### [3.7.1 Sovelluskehykset](#web-sovellusten-arkkitehtuuriratkaisut)
 
 [Web-sovelluskehys](https://en.wikipedia.org/wiki/Web_application_framework) (web application framework) on koodirunko jonka varaan web-sovellus voidaan rakentaa. Se sisältää kansiorakenteen ja luokkakirjastoja joiden avulla voidaan toteuttaa sovelluksen perusrakenne ja -toiminnot. Nykyaikaisiin sovelluskehyksiin on helppo lisätä uusia kirjastoja tarpeen mukaan ja niiden päivitys on yleensä myös automatisoitu. Sovelluskehys voi käyttää yhtä tai useampaa edellä kuvatuista arkkitehtuurimalleista.
 
@@ -214,27 +244,35 @@ Frontendeille, joiden toiminnallisuus web-sovelluksissa toteutetaan Javascriptil
 
 **Sovelluskehyksen haittoja**: Uuden koodaustavan opettelu, riippuvuus sovelluskehyksestä - jos koodi siirretään, pitää siirtää sovelluskehys mukana. Suuret sovelluskehykset voivat sisältää turhaa koodia. Rakenne usein monimutkaistuu. Uudemmat sovelluskehykset ovat tosin ytimeltään suppeita ja niihin asennetaan lisäpalveluja vain tarvittaessa, joten turhaa koodia ei juurikaan ole mukana.
 
-### [3.7.2 Moduulit ja ohjelmakirjastot&#8203;](#web-sovellusten-arkkitehtuuriratkaisut)
+<a id='372'></a>
+
+### [3.7.2 Moduulit ja ohjelmakirjastot](#web-sovellusten-arkkitehtuuriratkaisut)
 
 Moduulin käsiteellä on sovelluskehityksessä monia merkityksiä; vrt. [moduulaarinen arkkitehtuuri](#36). Esim. JS-sovelluskehityksessä moduuli ja ohjelmakirjasto voivat tarkoittaa samaa asiaa, koska ohjelmakirjastoja ladataan sovelluksiin npm-moduuleina. [Npm](https://www.npmjs.com/) eli Node package manager lataa JS-kirjastot ja niiden riippuvuudet automaattisesti  komentorivityökalun avulla.  Monet sovelluskehyksetkin ovat ladattavissa npm-moduuleina.
 
 Javascriptille on kehitetty moduulijärjestelmiä joiden avulla kehittäjä voi liittää sovellukseensa moduuleja ja tehdä myös omasta JS-koodistaan modulaarista eli "exportata" oman koodinsa rakenneosia moduuleina. [CommonJS](https://webpack.github.io/docs/commonjs.html) on perinteinen JS:n moduulijärjestelmä. Nodejs ja npm käyttävät sitä. Uudemmissa ES6-sovelluksissa on kuitenkin yleisesti käytössä [ES6 Modules](http://exploringjs.com/es6/ch_modules.html), joka on JS:n ES6-version moduulijärjestelmä. Se on käytössä mm. Angularissa.
 
-Hieman samantapaisia ratkaisuja on muissakin ohjelmointikielissä. Esim. PHP:n [Composer](https://getcomposer.org/) -paketit ja JavaEE:n [Maven](https://maven.apache.org/) -paketit.  
+Hieman samantapaisia ratkaisuja on muissakin ohjelmointikielissä. Esim. PHP:n [Composer](https://getcomposer.org/) -paketit ja JavaEE:n [Maven](https://maven.apache.org/) -paketit.
 
-### [3.7.3 Komponentit&#8203;](#web-sovellusten-arkkitehtuuriratkaisut)
+<a id='373'></a>
+
+### [3.7.3 Komponentit](#web-sovellusten-arkkitehtuuriratkaisut)
 
 [Komponentti](https://simplicable.com/new/software-components) on yleensä pienempi ohjelmiston osa kuin moduuli. Esim. Angularissa komponentit pakataan moduulin sisään. Komponentin käsite voi viitata frontend tai backend -komponenttiin. Esim. Angularin tai Reactin käyttöliittymäkomponentit ovat melko pieniä JS/TS-luokkia tai -funktioita. Käyttöliittymäkomponetti suorittaa monesti vain yhtä pientä tehtävää, esim. näyttää navigaatiopalkin tai sen osan ja toteuttaa sen käyttöliittymäpuolen toiminnallisuuden.
 
-### [3.7.4 Templaattijärjestelmät&#8203;](#web-sovellusten-arkkitehtuuriratkaisut)
+<a id='374'></a>
+
+### [3.7.4 Templaattijärjestelmät](#web-sovellusten-arkkitehtuuriratkaisut)
 
 Templaatti (template) on UI-sivupohja johon upotetaan dataa. Templaatin tarkoituksena on että sivun esityslogiikka (ulkoasu) erotetaan toimintalogiikasta (koodi). Sovelluskehityksessä pyritään usein siihen että ohjelmakoodi erotetaan mahdollisimman hyvin HTML-koodista ja suunnittelija joka ei hallitse ohjelmointia voi suunnitella sivuston HTML-rakenteen ja ulkoasun tarvitsematta koskea lainkaan ohjelmakoodiin. Nodejs:n Express -sovelluskehyksessä (Nodejs) voi käyttää useampaakin eri [templaattijärjestelmää](https://colorlib.com/wp/top-templating-engines-for-javascript/) (Template-engine). Templaattijärjestelmä voi olla erillinen järjestelmä  tai se voi sisältyä  sovelluskehykseen. Templaattisivun renderöinti voi tapahtua palvelinpuolella (esim. EJS(Node), Smarty(PHP)) tai asiakaspuolella (esim. Angularin templaatti).  
 
 Komponenttipohjaisten UI-kirjastojen - kuten Angular, React tai Vue - yleistyessä, tulee erillisten templaattijärjestelmien merkitys todennäköisesti vähenemään. Reactissa templaatti on upotettu komponenttiin muun koodin sekaan ja sitä ei yleensä irroiteta sieltä. Angularissa templaatti on yleensä erotettu komponentista erilliseksi tiedostoksi johon viitataan komponentissa.
 
--[Web template system](https://en.wikipedia.org/wiki/Web_template_system) (Wikipedia)  
+-[Web template system](https://en.wikipedia.org/wiki/Web_template_system) (Wikipedia)
 
-### [3.7.5 ORM ja ODM&#8203;](#web-sovellusten-arkkitehtuuriratkaisut)
+<a id='375'></a>
+
+### [3.7.5 ORM ja ODM](#web-sovellusten-arkkitehtuuriratkaisut)
 
 Usein sovelluksissa tarvitaan sellaista ominaisuutta että oliot voidaan tallentaa pysyvään tilaan. Oliot häviävät koneen muistista lopetettaessa sovellus. Jos halutaan vaikkapa jatkaa myöhemmin tilanteesta johon lopetettaessa jäätiin, olisi hyvä saada olioiden tila tallennettua ja pystyä palauttamaan ne tallennustilasta muistiin. Hyvä esimerkki tästä on vaikkapa roolipelin tilanteen tallennus ja jatkaminen siitä (save/resume). Object Persistence eli olioiden pysyvyys on termi jota usein käytetään kuvaamaan tätä prosessia.  
 
@@ -246,9 +284,11 @@ ORM/ODM -kirjastot ovat aina backend-puolen kirjastoja. Tunnettuja ORM -kirjasto
 
 ORM- ja ODM-kirjastot eivät pelkästään hallinnoi olioiden tallentamista kantaan ja sieltä palauttamista, vaan ne yleensä myös abstraktoivat tietokantarajapinnan eli tarjoavat yksinkertaisemmat metodit tietokannan käsittelyyn. ORM/ODM:n tarjoaman rajapinnan abstraktion ansiosta tietokannan vaihtaminen helpottuu huomattavasti. ORM/ODM:n käyttö myös pakottaa kantaan tallennettavan tiedon tietyn mallin mukaiseksi jolloin mitä tahansa tietoa ei voi tallentaa kantaan eli tiedon luotettavuus paranee. Joskus tietokantaa voi käyttää sovelluskehyksessä ainoastaan ORM/ODM -rajapinnan kautta.
 
--[ODM -esimerkki](https://github.com/tuitogitti/web_arkkitehtuurit/tree/master/esimerkit/restmvc)  
+-[ODM -esimerkki](https://github.com/tuitogitti/web_arkkitehtuurit/tree/master/esimerkit/restmvc)
 
-## [4 Ohjelmistosuunnittelumallit (Software design patterns)&#8203;](#web-sovellusten-arkkitehtuuriratkaisut)
+<a id='4'></a>
+
+## [4 Ohjelmistosuunnittelumallit (Software design patterns)](#web-sovellusten-arkkitehtuuriratkaisut)
 
 [Ohjelmistosuunnittelumalleja](https://en.wikipedia.org/wiki/Software_design_pattern) on kehitetty ennen kuin web-sovelluksia oli edes olemassa. Klassiset "patternit" on määritelty 1994 ilmestyneessä kirjassa [Design Patterns](https://en.wikipedia.org/wiki/Design_Patterns). Suurin osa kirjassa esitellyistä malleista on otettu käyttöön myös web-sovelluksissa ja myöhemmin malleja on syntynyt lisää.
 
@@ -262,13 +302,17 @@ Mallit voidaan jakaa karkeasti neljään luokkaan, mutta kaikki mallit eivät "m
 
 Erilaisia ohjelmistosuunnittelumalleja on web-sovelluksissa niin paljon että niitä kaikkia on mahdotonta esitellä tässä. Niinpä tutustumme vain muutamaan esimerkkiin. Lisää löytyy esim. täältä: [Javascript design patterns](https://able.bio/drenther/javascript-design-patterns--89mv2af)
 
-### [4.1 Dependency Injection ja Inversion of Control&#8203;](#web-sovellusten-arkkitehtuuriratkaisut)
+<a id='41'></a>
+
+### [4.1 Dependency Injection ja Inversion of Control](#web-sovellusten-arkkitehtuuriratkaisut)
 
 [Dependency Injection](https://en.wikipedia.org/wiki/Dependency_injection) (riippuvuuden injektointi) on kehitetty tekemään sovelluksen yksiköt, esim. komponentit tai oliot vähemmän riippuvaisiksi toisistaan. Siihen liittyy [Inversion of Control](https://en.wikipedia.org/wiki/Inversion_of_control) (kontrollin kääntäminen) -periaate, joka tarkoittaa sitä että yksiköt voidaan vaihtaa helposti toisiin, ilman että koodiin tarvitsee tehdä juuri mitään muutoksia ja vaihtamisen kontrollointi sijaitsee esim. sovelluskehyksen konffitiedostossa (on käännetty sinne). DI luokitellaan [luomiseen liittyväksi malliksi](https://en.wikipedia.org/wiki/Creational_pattern), koska olio (riippuvuus) joka vastaanotetaan toiseen olioon (asiakas) luodaan sinne injektorina.  
 
 -[DI ja IoC -esimerkki](https://github.com/tuitogitti/web_arkkitehtuurit/tree/master/esimerkit/ang-di)
 
-### [4.2 Reaktiiviset suunnittelumallit ja Observer-observable pattern&#8203;](#web-sovellusten-arkkitehtuuriratkaisut)
+<a id='42'></a>
+
+### [4.2 Reaktiiviset suunnittelumallit ja Observer-observable pattern](#web-sovellusten-arkkitehtuuriratkaisut)
 
 Reaktiivisilla suunnittelumalleilla (Reactive design patterns) tarkoitetaan sellaisia arkkitehtuurimalleja jotka hyödyntävät [reaktiivisen ohjelmoinnin](https://en.wikipedia.org/wiki/Reactive_programming) periaatteita. Reaktiivinen ohjelmointi tarkoittaa sellaisten sovellusten kehittämistä jotka perustuvat jatkuvan datavirran (streamin) reaaliaikaiseen syöttämiseen (push) sovellukseen. Perinteisessä REST-palvelussa dataa haetaan (pull) sovellukseen. Reaktiivinen toimintaperiaate on nopeampi ja tehokkaampi. Reaktiiviset suunnittelumallit ovat useimmiten [käyttäytymiseen liittyviä malleja](https://en.wikipedia.org/wiki/Behavioral_pattern), koska reaktiivisuus liityy kommunikaatioon.  
 
@@ -285,25 +329,33 @@ Voi olla että reaktiivinen sovellus ei kykene ottamaan vastaan datavirtaa niin 
 
 -[Reaktiivinen observer-observable -esimerkki](https://github.com/tuitogitti/web_arkkitehtuurit/tree/master/esimerkit/ang-communicationservice)
 
-### [4.3 Mediator pattern&#8203;](#web-sovellusten-arkkitehtuuriratkaisut)
+<a id='43'></a>
+
+### [4.3 Mediator pattern](#web-sovellusten-arkkitehtuuriratkaisut)
 
 [Mediator-pattern](https://en.wikipedia.org/wiki/Mediator_pattern) on ohjelmistosuunnittelumalli joka mahdollistaa kahden toisistaan eristetyn yksikön välisen kommunikaation ilman yksiköiden välistä riippuvuutta. Ns. mediaattori toimii kommunikaation välittäjänä. Esim. Angularissa äitikomponentti voi toimia kahden lapsikomponenttinsa mediaattorina. Mediator-pattern on [käyttäytymiseen liittyvä malli](https://en.wikipedia.org/wiki/Behavioral_pattern), sillä se määrittelee rakenneosien välisen kommunikaation.  
 
 -[Mediator-pattern esimerkki](https://github.com/tuitogitti/web_arkkitehtuurit/tree/master/esimerkit/ang-mediator)
 
-### [4.4 Lazy-loading -pattern&#8203;](#web-sovellusten-arkkitehtuuriratkaisut)
+<a id='44'></a>
+
+### [4.4 Lazy-loading -pattern](#web-sovellusten-arkkitehtuuriratkaisut)
 
 [Lazy-loading -pattern](https://en.wikipedia.org/wiki/Lazy_loading) on ohjelmistosuunnittelumalli joka mahdollistaa sovelluksen rakenneosan/olion lataamisen/luomisen muistiin vasta sitten kun sitä tarvitaan sovelluksessa. Tästä on hyötyä erityisesti web-sovelluksissa joissa halutaan nopeuttaa sovelluksen latautumista palvelimelta asiakaspuolelle jotta sovelluksen käynnistymisaika jäisi mahdollisimman lyhyeksi. Myös harvoin tarvittava rakenneosa voidaan ottaa käyttöön lazy-loading -periaatteella. Lazy-loading malli ei kuulu suoraan mihinkään edellä esitettyyn kategoriaan, mutta koska se liittyy olion luomiseen muistiin, se voisi olla lähinnä kreationaalinen eli [luomiseen liittyvä](https://en.wikipedia.org/wiki/Creational_pattern) malli.  
 
 -[Lazy-loading -pattern esimerkki](https://github.com/tuitogitti/web_arkkitehtuurit/tree/master/esimerkit/ang-router)
 
-### [4.5 Decorator -pattern&#8203;](#web-sovellusten-arkkitehtuuriratkaisut)
+<a id='45'></a>
+
+### [4.5 Decorator -pattern](#web-sovellusten-arkkitehtuuriratkaisut)
 
 [Decorator -pattern](https://en.wikipedia.org/wiki/Decorator_pattern) on ohjelmistosuunnittelumalli joka mahdollistaa ominaisuuksien tai toimintojen lisäämisen olioon dynaamisesti. Dekoraattori on funktio joka tarjoaa oliolle ominaisuudet tai toiminnot. Decorator -pattern on käytössä esim. JavaEE:n [Spring](https://blog.tratif.com/2018/04/12/decorating-spring-components/) -sovelluskehyksessä ja [Angularissa](https://codecraft.tv/courses/angular/es6-typescript/decorators/) jossa dekoraattori antaa mm. komponenteille ja moduuleille niiden ominaisuudet ja toiminnot. Decorator -pattern on strukturaalinen eli [rakenteeseen liittyvä](https://en.wikipedia.org/wiki/Structural_pattern) ohjelmistosuunnittelumalli, sillä sen avulla muutetaan olion rakennetta.
 
 ***
 
-## [5 Tehtävät&#8203;](#web-sovellusten-arkkitehtuuriratkaisut)
+<a id='5'></a>
+
+## [5 Tehtävät](#web-sovellusten-arkkitehtuuriratkaisut)
 
 ### Tehtävä 1.  Ohjelmistosuunnittelumalleihin tutustuminen
 
