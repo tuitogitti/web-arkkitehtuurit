@@ -60,7 +60,7 @@
 
 Aivan kuten rakennusarkkitehti suunnittelee mistä rakenneosista tehdään talo ja kuinka osat toimivat keskenään, sovellusarkkitehti suunnittelee web-sovelluksen rakenneosat ja niiden välisen vuorovaikutuksen. Web-sovelluksessa voidaan käyttää yhtä tai useampaa arkkitehtuuriratkaisua. Ylemmän tason arkkitehtuurin sisällä olevissa rakenneosissa voidaan käyttää toista arkkitehtuurimallia ja frontendeillä ja backendeillä voi olla omat arkkitehtuurimallinsa.  
 
-Arkkitehtuuriratkaisujen tavoitteita ovat mm. kehitystyön helpottaminen, sovelluksen skaalautuvuuden parantaminen sekä rakenneosien uudelleenkäytettävyyden ja testattavuuden parantaminen. Jotkin arkkitehtuuriratkaisut voivat myös nopeuttaa sovelluksen toimintaa ja tehostaa muistin käyttöä.  
+Arkkitehtuuriratkaisujen tavoitteita ovat mm. kehitystyön helpottaminen, sovelluksen skaalautuvuuden parantaminen sekä rakenneosien uudelleenkäytettävyyden ja testattavuuden parantaminen. Jotkin arkkitehtuuriratkaisut voivat myös nopeuttaa sovelluksen toimintaa, tehostaa muistin käyttöä ja parantaa sovelluksen tietoturvaa.  
 
 Web-sovellusten arkkitehtuuriratkaisut voidaan jakaa kolmeen tasoon. Ylemmän tason arkkitehtuurit voivat sisältää alemman tason arkkitehtuureja:
 
