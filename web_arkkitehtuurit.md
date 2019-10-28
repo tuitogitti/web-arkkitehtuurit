@@ -64,11 +64,11 @@ Arkkitehtuuriratkaisujen tavoitteita ovat mm. kehitystyön helpottaminen, sovell
 
 Web-sovellusten arkkitehtuuriratkaisut voidaan jakaa kolmeen tasoon. Ylemmän tason arkkitehtuurit voivat sisältää alemman tason arkkitehtuureja:
 
-1. [Infrastruktuuritason arkkitehtuurimallit](https://aws.amazon.com/architecture/). Infrastruktuuri jakaa sovelluksen rakenneosiin. Esim. sovelluksen osien hajauttaminen eri palvelimille tai kontteihin eli palvelintason arkkitehtuuri (server architecture). Tähän sisältyy myös sovelluksen suorituksen hajauttaminen palvelin- ja asiakaspuolelle.  
+1. [Infrastruktuuritason arkkitehtuurimallit](#2). Infrastruktuuri jakaa sovelluksen rakenneosiin. Esim. sovelluksen osien hajauttaminen eri palvelimille tai kontteihin eli palvelintason arkkitehtuuri (server architecture). Tähän sisältyy myös sovelluksen suorituksen hajauttaminen palvelin- ja asiakaspuolelle.  
 
-2. [Ohjelmistotason arkkitehtuurimallit](https://en.wikipedia.org/wiki/Architectural_pattern). Sovellus jakautuu määriteltyihin rakenneosiin joilla on omat roolinsa. Esim. sovelluskehyksen tarjoama perusrakenne kuten MVC.  
+2. [Ohjelmistotason arkkitehtuurimallit](#3). Sovellus jakautuu määriteltyihin rakenneosiin joilla on omat roolinsa. Esim. sovelluskehyksen tarjoama perusrakenne kuten MVC.  
 
-3. [Ohjelmistosuunnittelumalli](https://en.wikipedia.org/wiki/Software_design_pattern)t. Pienempiä arkkitehtuuriratkaisuja eli malleja (pattern) jotka eivät vaikuta koko sovelluksen rakenteeseen vaan antavat esim. mallin sille miten tietty toiminto tulee toteuttaa.
+3. [Ohjelmistosuunnittelumallit](#4). Pienempiä arkkitehtuuriratkaisuja eli malleja (pattern) jotka eivät vaikuta koko sovelluksen rakenteeseen vaan antavat esim. mallin sille miten tietty toiminto tulee toteuttaa.
 
 Useimmat tässä esitellyt arkkitehtuuriratkaisut eivät rajoitu pelkästään web-sovelluksiin, vaan niitä käytetään kaikenlaisilla alustoilla toimivissa ohjelmistoissa. Esim. työpöytäsovellukseen alunperin kehitelty arkkitehtuuriratkaisu on voitu ottaa käyttöön web-sovellukseen kun työpöytäsovellus on nykytrendien mukaisesti muutettu web-sovellukseksi.
 
@@ -98,7 +98,7 @@ Asiakas-palvelin -malli on vanhimpia infrastruktuuritason arkkitehtuurimalleja. 
 
 ### [2.3 REST-arkkitehtuuri](#web-sovellusten-arkkitehtuuriratkaisut)
 
-[REST](http://en.wikipedia.org/wiki/Representational_state_transfer) -arkkitehtuuri voidaan määritellä yhdeksi SOA-arkkitehtuurin muodoksi. REST eli Representational State Transfer -termillä tarkoitetaan tiedonsiirtoa HTTP:n välityksellä XML-, JSON- tai tekstimuodossa. REST -rajapintoja käytetään nykyään todella paljon, paitsi sovellusten väliseen, myös sovelluksen sisäiseen tiedonsiirtoon. Sovelluksen backend eli palvelinpuoli voidaan toteuttaa esim. Nodejs:llä ja frontend eli asiakaspuoli Angularilla. Nämä ovat kokonaan erillään toisistaan ja tieto niiden välillä kulkee REST-rajapinnan kautta JSON-muodossa. Sekä backend että frontend voivat noudattaa ohjelmistotasolla esim. MVC-arkkitehtuuria.
+[REST](http://en.wikipedia.org/wiki/Representational_state_transfer) -arkkitehtuuri voidaan määritellä yhdeksi SOA-arkkitehtuurin muodoksi. REST eli Representational State Transfer -termillä tarkoitetaan tiedonsiirtoa HTTP:n välityksellä XML-, JSON- tai tekstimuodossa. REST API -rajapintoja käytetään nykyään todella paljon, paitsi sovellusten väliseen, myös sovelluksen sisäiseen tiedonsiirtoon. Sovelluksen backend eli palvelinpuoli voidaan toteuttaa esim. Nodejs:llä ja frontend eli asiakaspuoli Angularilla. Nämä ovat kokonaan erillään toisistaan ja tieto niiden välillä kulkee REST-rajapinnan kautta JSON-muodossa. Sekä backend että frontend voivat noudattaa ohjelmistotasolla esim. MVC-arkkitehtuuria.
 
 REST-arkkitehtuurin perusidea on se, että HTTP:n peruskomennot GET, POST, PUT, PATCH ja DELETE määräävät haetaanko tietystä URL-osoitteesta dataa, lähetetäänkö sinne dataa, muokataanko siellä olevaa dataa vai poistetaanko sieltä dataa. Näin päästään manipuloimaan esim. tietokantaa asiakaspuolen sovelluksesta tehdyillä URL-pyynnöillä.
 
@@ -125,9 +125,9 @@ Palvelinpuolen ja asiakaspuolen sovellusten erottaminen toisistaan tarjoaa seura
 
 ### [2.4 Microservice -arkkitehtuuri](#web-sovellusten-arkkitehtuuriratkaisut)
 
-[Microservice](https://en.wikipedia.org/wiki/Microservices) -arkkitehtuuri on modulaarinen palvelintason arkkitehtuuri joka voi toimia myös SOA-arkkitehtuurin periaatteella. Backend koostuu toisistaan riippumattomista mikropalveluista jotka voivat siirtää dataa sovelluksen "päämoduulille" tai suoraan asiakassovellukselle web-selaimeen tai mobiililaitteelle. Jokaisella mikropalvelulla on oma tietovarasto, yleensä tietokanta. Microservice -sovelluksen vastakohta on monoliittinen sovellus, jossa kaikki palvelut ovat kiinni samassa backend-sovelluksessa ilman mahdollisuutta erottaa niitä toisistaan.  
+[Microservice](https://en.wikipedia.org/wiki/Microservices) -arkkitehtuuri on modulaarinen palvelintason arkkitehtuuri joka toimii usein SOA-arkkitehtuurin periaatteella. Backend koostuu toisistaan riippumattomista mikropalveluista jotka voivat siirtää dataa API-rajapinnan välityksellä sovelluksen "päämoduulille" tai suoraan asiakassovellukselle web-selaimeen tai mobiililaitteelle. Jokaisella mikropalvelulla on oma tietovarasto, yleensä tietokanta. Microservice -sovelluksen vastakohta on monoliittinen sovellus, jossa kaikki palvelut ovat kiinni samassa backend-sovelluksessa ilman mahdollisuutta erottaa niitä toisistaan.  
 
-Microservice-arkkitehtuurin suurimpana etuna on mahdollisuus päivittää sovellusta nopeasti uudella mikropalvelulla ja mahdollisuus päivittää väin tietty mikropalvelu ilman että tarvitsee tehdä muutoksia koko sovelluksen koodiin. Mikropalvelut pakataan usein [Docker](https://www.docker.com/what-docker)-kontteihin jotka ovat helposti siirreltäviä. Mikropalveluita voidaan toteuttaa kaikilla yleisimmillä web-sovellusten kehitykseen käytetyillä kielillä ja niiden kehittämiseen on omia sovelluskehyksiään, esim. Nodejs:n [Seneca](http://senecajs.org/) ja PHP:n [Lumen](https://lumen.laravel.com/).  
+Microservice-arkkitehtuurin suurimpana etuna on mahdollisuus päivittää sovellusta nopeasti uudella mikropalvelulla ja mahdollisuus päivittää väin tietty mikropalvelu ilman että tarvitsee tehdä muutoksia koko sovelluksen koodiin. Mikropalvelut pakataan usein [Docker](https://www.docker.com/what-docker)-kontteihin jotka ovat helposti siirreltäviä. Mikropalveluita voidaan toteuttaa kaikilla yleisimmillä web-sovellusten kehitykseen käytetyillä kielillä ja niiden kehittämiseen on omia sovelluskehyksiään, esim. Nodejs:n [Seneca](http://senecajs.org/) ja PHP:n [Lumen](https://lumen.laravel.com/). JEE -sovelluskehys [Spring](https://spring.io/blog/2015/07/14/microservices-with-spring) on ollut pitkään yleisimpiä välineitä mikropalveluiden toteutuksessa, mutta viime aikoina mikropalveluiden kehitys on siirtynyt enenevissä määrin pilvipalveluiden serverless -alustoille.  
 
 ![mikropalvelut](microservices.png)  
 
@@ -143,7 +143,7 @@ Baas -palvelu on hieman suurempi serverless-palvelu kuten tietovarasto tai auten
 
 Faas-palvelut ovat mikropalveluita jotka muodostuvat funktioista. Vanhin ja tunnetuin FaaS-alusta on [AWS Lambda](https://aws.amazon.com/lambda/details/). Serverless-funktiot soveltuvat hyvin tilanteisiin joissa jokin  tapahtuma sovelluksessa laukaisee funktion suorituksen. Esimerkiksi videon laittaminen Amazonin S3 Bucket -tietovarastoon on tapahtuma joka laukaisee lambda-funktion joka tekee videosta kompressoidun version ja tallentaa sen eri paikkaan kuin alkuperäisen. Tapahtumapohjaisen mikropalvelun suorittaminen serverless-periaatteella ilman oman palvelimen ylläpitoa on edullista. Serverless-mikropalvelu on käynnissä vain sen ajan kun sitä käytetään eli edellisessä esimerkissä niin kauan kuin kompressointi ja tallennus kesti.
 
-Serverless-funktioilla toteutetaan tyypillisesti vain ne backendin toiminnot, esim. tapahtumilla laukaistavat toiminnot, joihin funktiot soveltuvat hyvin. Sovelluksella voi olla edelleen myös perinteinen backend jossa suoritetaan muita toimintoja. Kokonaisen laajan backendin totetuttaminen serverless-periaatteella voi tehdä arkkitehtuurista monimutkaisen, sekavan ja vaikeasti testattavan.
+Serverless-funktioilla voidaan tarvittaessa toteuttaa vain ne backendin toiminnot, esim. tapahtumilla laukaistavat toiminnot, joihin funktiot soveltuvat erityisen hyvin. Sovelluksella voi olla serverless-backendin lisäksi myös perinteinen backend jossa suoritetaan muita toimintoja. Kokonaisen laajan backendin totetuttaminen serverless-periaatteella on mahdollista, mutta voi olla tietyissä tapauksissa haastavaa ja aiheuttaa ongelmia esim. monimutkaisuuden sekä vaikean hallittavuuden ja testattavuuden vuoksi.
 
 -[Serverless Architecture: Five Design Patterns](https://thenewstack.io/serverless-architecture-five-design-patterns/)  
 -[Serverless Architecture Criticism and Drawbacks](https://medium.com/@MarutiTech/what-is-serverless-architecture-what-are-its-criticisms-and-drawbacks-928659f9899a)  
@@ -232,7 +232,7 @@ Web-komponenttiarkkitehtuuri tarkoittaa tässä [Web-components](https://en.wiki
 
 [Web-sovelluskehys](https://en.wikipedia.org/wiki/Web_application_framework) (web application framework) on koodirunko jonka varaan web-sovellus voidaan rakentaa. Se sisältää kansiorakenteen ja luokkakirjastoja joiden avulla voidaan toteuttaa sovelluksen perusrakenne ja -toiminnot. Nykyaikaisiin sovelluskehyksiin on helppo lisätä uusia kirjastoja tarpeen mukaan ja niiden päivitys on yleensä myös automatisoitu. Sovelluskehys voi käyttää yhtä tai useampaa edellä kuvatuista arkkitehtuurimalleista.
 
-Web-sovelluskehyksissä käytetään yleisimmin MVC-arkkitehtuuria jonka avulla sovelluslogiikka erotetaan käyttöliittymästä. Tällöin model-, view- ja controller -koodit sijoitetaan omiin kansioihinsa. Sovelluksen mediaelementeille yms. rakenneosille on omat kansionsa.
+Web-sovelluskehyksissä käytetään yleisimmin MVC-arkkitehtuuria tai sen muunnosta jonka avulla sovelluslogiikka erotetaan käyttöliittymästä. Tällöin model-, view- ja controller -koodit sijoitetaan omiin kansioihinsa. Sovelluksen mediaelementeille yms. rakenneosille on omat kansionsa.
 
 Web-sovellusten kehittämiseen on olemassa valtavasti [erilaisia sovelluskehyksiä](https://en.wikipedia.org/wiki/Comparison_of_web_application_frameworks). Lähes kaikilla web-sovelluskehitykseen sopivilla ohjelmointikielillä on kymmeniä tai jopa satoja vaihtoehtoja sovelluskehyksen valintaan.
 
