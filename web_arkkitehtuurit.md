@@ -14,6 +14,8 @@
 >
 > ### [2.5 Serverless -arkkitehtuuri](#25)
 
+### [2.6 JAMstack-arkkitehtuuri](#26)
+
 ## [3 Ohjelmistotason arkkitehtuurimallit (Software architectural patterns)](#3)
 
 > ### [3.1 MVC-arkkitehtuuri](#31)
@@ -141,7 +143,7 @@ Microservice-arkkitehtuurin suurimpana etuna on mahdollisuus päivittää sovell
 
 Baas -palvelu on hieman suurempi serverless-palvelu kuten tietovarasto tai autentikaatiopalvelu. Tyypillinen esimerkki on [Googlen Firebase](https://firebase.google.com/)  joka tarjoaa palveluja mobiilisovelluksille.  
 
-Faas-palvelut ovat mikropalveluita jotka muodostuvat funktioista. Vanhin ja tunnetuin FaaS-alusta on [AWS Lambda](https://aws.amazon.com/lambda/details/). Serverless-funktiot soveltuvat hyvin tilanteisiin joissa jokin  tapahtuma sovelluksessa laukaisee funktion suorituksen. Esimerkiksi videon laittaminen Amazonin S3 Bucket -tietovarastoon on tapahtuma joka laukaisee lambda-funktion joka tekee videosta kompressoidun version ja tallentaa sen eri paikkaan kuin alkuperäisen. Tapahtumapohjaisen mikropalvelun suorittaminen serverless-periaatteella ilman oman palvelimen ylläpitoa on edullista. Serverless-mikropalvelu on käynnissä vain sen ajan kun sitä käytetään eli edellisessä esimerkissä niin kauan kuin kompressointi ja tallennus kesti.
+Faas-palvelut ovat mikropalveluita jotka muodostuvat funktioista. Vanhin ja tunnetuin FaaS-alusta on [AWS Lambda](https://aws.amazon.com/lambda/details/). Serverless-funktiot soveltuvat hyvin tilanteisiin joissa jokin tapahtuma sovelluksessa laukaisee funktion suorituksen. Esimerkiksi videon laittaminen Amazonin S3 Bucket -tietovarastoon on tapahtuma joka laukaisee lambda-funktion joka tekee videosta kompressoidun version ja tallentaa sen eri paikkaan kuin alkuperäisen. Tapahtumapohjaisen mikropalvelun suorittaminen serverless-periaatteella ilman oman palvelimen ylläpitoa on edullista. Serverless-mikropalvelu on käynnissä vain sen ajan kun sitä käytetään eli edellisessä esimerkissä niin kauan kuin kompressointi ja tallennus kesti.
 
 Serverless-funktioilla voidaan tarvittaessa toteuttaa vain ne backendin toiminnot, esim. tapahtumilla laukaistavat toiminnot, joihin funktiot soveltuvat erityisen hyvin. Sovelluksella voi olla serverless-backendin lisäksi myös perinteinen backend jossa suoritetaan muita toimintoja. Kokonaisen laajan backendin totetuttaminen serverless-periaatteella on mahdollista, mutta voi olla tietyissä tapauksissa haastavaa ja aiheuttaa ongelmia esim. monimutkaisuuden sekä vaikean hallittavuuden ja testattavuuden vuoksi.
 
@@ -162,6 +164,28 @@ Kuvassa on esitetty Serverless -funktioiden käytön perusperiaate:
 Funktio ja sen container poistetaan serveriltä suorituksen jälkeen. Vain funktion suoritusajasta serverillä (jokainen 100ms) laskutetaan asiakasta.  
 
 -[Serverless deployment](http://microservices.io/patterns/deployment/serverless-deployment.html)
+
+### [2.6 JAMstack-arkkitehtuuri](#web-sovellusten-arkkitehtuuriratkaisut)
+
+[JAMstack](https://www.freecodecamp.org/news/what-is-the-jamstack-and-how-do-i-host-my-website-on-it/)
+on web-sovelluskehityksen trendi joka on noussut frontend
+-kehittäjien suosioon 2010 -luvun loppupuolelta alkaen. Kyseessä on arkkitehtuuri tai
+sovelluskehitysparadigma joka perustuu siihen että sovelluksen tulee
+sisältää pelkästään Javascriptiä(J), API-rajapintoja ulkopuolisiin
+palveluihin(A), sekä merkintäkieltä(M). Sovellus ei sisällä lainkaan
+backendiä, vaan sen kaikki data tulee API -rajapintojen kautta muista
+sovelluksista. Esimerkiksi jos teemme blogin, käytämme vaikkapa jotain
+valmista blogialustaa jossa on backend-koodi ja tietokanta, ja
+oma sovelluksemme vain hakee dataa sieltä API:n kautta. Myös
+kirjoittelu voidaan tehdä API:n kautta tai kirjaudutaan suoraan
+valmiille alustalle kirjoittelemaan. Lisäksi periaatteena on se että
+sovellus muodostuu staattisista sivusta jotka voidaan tarjoilla hyvin
+nopeasti miltä tahansa palvelimelta tai CDN:stä. Tämän toteuttamiseen
+käytetään [staattisten sivustojen generaattoreita (SSG)](https://www.staticgen.com/),
+joiden avulla rakennetaan staattinen sivusto jossa API:en kautta tuleva data on etukäteen lisätty
+sivuille. Kun data muuttuu, staattiset sivut generoidaan uudelleen.
+
+JAMstack on kevyt ja tietoturvallinen tapa toteuttaa web-sovelluksia. Staattiset sivut latautuvat asiakkaalle hyvin nopeasti myös hitailla web-yhteyksillä. Ihan kaikkiin tarkoituksiin JAMstack ei kuitenkaan sovellu. Ongelmana on täydellinen riippuvuus kolmannen osapuolen palveluntarjoajista (API:t, Serverless -alustat yms.) ja hankaluus toteuttaa kaikkein tehokkaimpia ja monipuolisimpia dynaamisia palveluita. Esimerkiksi reaktiivisesta hausta on hankala tuottaa staattisia sivuja. On kuitenkin mahdollista tarjoilla myös vain osa sovelluksesta staattisina sivuina.
 
 <a id='3'></a>
 
