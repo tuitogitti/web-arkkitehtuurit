@@ -13,8 +13,8 @@
 > ### [2.4 Microservice -arkkitehtuuri](#24)
 >
 > ### [2.5 Serverless -arkkitehtuuri](#25)
-
-### [2.6 JAMstack-arkkitehtuuri](#26)
+>
+> ### [2.6 JAMstack-arkkitehtuuri](#26)
 
 ## [3 Ohjelmistotason arkkitehtuurimallit (Software architectural patterns)](#3)
 
