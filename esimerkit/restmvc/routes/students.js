@@ -40,5 +40,4 @@ router.put('/updcourse/:id/:cid', student_controller.course_update);
 
 /* DELETE */
 
-
 module.exports = router;

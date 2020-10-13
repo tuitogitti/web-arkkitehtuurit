@@ -1,20 +1,16 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <!-- Templaattisivu jossa on view -->
-    <title>
-        <%= title %>
-    </title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-</head>
-<body>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
     <h1><%= title %></h1>
     <ul>
-        <% list.forEach(function(i) { %>
-            <li>
-                <%= i.name %> - <%= i.email %>
-            </li>
-        <% }); %>
+      <% list.forEach(function(i) { %>
+      <li><%= i.name %> - <%= i.email %></li>
+      <% }); %>
     </ul>
-</body>
+  </body>
 </html>
