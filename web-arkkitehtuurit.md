@@ -165,7 +165,7 @@ Funktio ja sen container poistetaan serveriltä suorituksen jälkeen. Vain funkt
 
 -[Serverless deployment](http://microservices.io/patterns/deployment/serverless-deployment.html)
 
-<a id='25'></a>
+<a id='26'></a>
 
 ### [2.6 JAMstack-arkkitehtuuri](#web-sovellusten-arkkitehtuuriratkaisut)
 
